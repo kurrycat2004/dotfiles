@@ -6,5 +6,9 @@
 - Pull dotfiles
   - `chezmoi init git@github.com:kurrycat2004/dotfiles.git`
 
+- Packages
+  - required: `alacritty anyrun niri noctalia-shell`
+  - want: `btop chameleos lf micro`
+
 - Apply dotfiles
   - `chezmoi apply`
