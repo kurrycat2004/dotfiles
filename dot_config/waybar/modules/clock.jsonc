@@ -1,0 +1,25 @@
+{
+    "clock": {
+        "format": "  {:%H:%M   %e %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>"
+    },
+    
+    "clock#1": {
+        "format": " {:%a}",
+        "tooltip": false,
+        "on-click": "gsimplecal"
+    },
+    
+    "clock#2": {
+        "format": " {:%d-%h-%Y}",
+        "tooltip": false,
+        "on-click": "gsimplecal"
+    },
+    
+    "clock#3": {
+        "format": " {:%H:%M:%S %p}",
+        "tooltip": false,
+        "on-click": "gsimplecal"
+    }
+}

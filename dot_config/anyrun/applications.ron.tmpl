@@ -1,0 +1,10 @@
+Config(
+    desktop_actions: false,
+    max_entries: 5,
+    hide_description: true,
+    preprocess_exec_script: None,
+    terminal: Some(Terminal(
+        command: "{{ .terminal }}",
+        args: "{{ .terminalArgs }} {}",
+    )),
+)

@@ -1,0 +1,17 @@
+{
+    "include": [
+        "modules/media.jsonc",
+        "modules/yt-music.jsonc"
+    ],
+    
+    "group/media": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/yt-dislike",
+            "custom/yt-like",
+            "mpris#state",
+            "custom/media_next",
+            "mpris#meta"
+        ]
+    }
+}

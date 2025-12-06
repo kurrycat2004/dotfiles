@@ -1,0 +1,48 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    "height": 36,
+
+    "margin-left": 10,
+    "margin-bottom": 0,
+    "margin-right": 10,
+
+    "spacing": 5, // Gaps between modules (4px)
+
+    "include": [
+        "modules.jsonc",
+        "groups.jsonc",
+    ],
+
+    "modules-left": [
+        //"custom/rofi",
+        "hyprland/workspaces",
+        //"hyprland/submap",
+        //"temperature",
+        //"idle_inhibitor",
+        "group/media"
+    ],
+    "modules-center": [
+        //"hyprland/window",
+        "clock",
+        "custom/weather"
+        //"custom/gammastep"
+    ],
+    "modules-right": [
+        "backlight",
+        "custom/storage",
+        "memory",
+        "cpu",
+        "battery",
+        "wireplumber",
+        "network",
+        "tray",
+        "custom/power"
+    ]
+}

@@ -1,0 +1,17 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+clipboard {
+    disable-primary
+}
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

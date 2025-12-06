@@ -1,0 +1,16 @@
+include "autostart.kdl"
+
+include "input.kdl"
+include "monitors.kdl"
+
+include "layout.kdl"
+include "animations.kdl"
+include "overview.kdl"
+include "binds.kdl"
+
+include "noctalia.kdl"
+
+include "misc.kdl"
+include "environment.kdl"
+
+include "window-rules.kdl"

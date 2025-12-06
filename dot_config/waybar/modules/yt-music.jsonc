@@ -1,0 +1,17 @@
+{
+    "custom/yt-like": {
+      "format": " {} ",
+      "interval": 2,
+      "exec": "~/.config/ytmusic/ytmusic.sh select-liked \"<span font_desc='JetBrainsMonoNL Nerd Font Regular'>\uf164</span>\" \"<span font_desc='JetBrainsMonoNL Nerd Font Solid'>\uf164</span>\"",
+      "tooltip-format": "Like current track",
+      "on-click": "~/.config/ytmusic/ytmusic.sh like"
+    },
+
+    "custom/yt-dislike": {
+      "format": " {} ",
+      "interval": 2,
+      "exec": "~/.config/ytmusic/ytmusic.sh select-disliked \"<span font_desc='JetBrainsMonoNL Nerd Font Regular'>\uf165</span>\" \"<span font_desc='JetBrainsMonoNL Nerd Font Solid'>\uf165</span>\"",
+      "tooltip-format": "Dislike current track",
+      "on-click": "~/.config/ytmusic/ytmusic.sh dislike"
+    }
+}

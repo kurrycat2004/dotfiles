@@ -1,0 +1,30 @@
+{
+    "mpris#state": {
+        "format": " {status_icon} ",
+        "status-icons": { 
+            "playing": "", 
+            "paused": "", 
+            "stopped": "" 
+        },
+        "on-click": "playerctl play-pause",
+        "tooltip-format": "Play/Pause",
+        "class": "hover-color"
+    },
+
+    "mpris#meta": {
+        "format": "{title} - {artist}",
+        "max-length": 50,
+        "tooltip": true,
+        "on-scroll-up": "playerctl volume 0.01+",
+        "on-scroll-down": "playerctl volume 0.01-",
+        //"tooltip-format": "{}\nScroll to change volume"
+        "class": "hover-color"
+    },
+
+    "custom/media_next": {
+        "format": "  ",
+        "on-click": "playerctl next",
+        "tooltip-format": "Next",
+        "class": "hover-color"
+    },
+}

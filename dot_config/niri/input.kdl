@@ -1,0 +1,20 @@
+// https://yalter.github.io/niri/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            layout "de"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        accel-speed 0.1
+        accel-profile "flat"
+    }
+}

@@ -1,0 +1,12 @@
+[Unit]
+Description=Chameleos
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/chameleos
+Restart=always
+RestartSec=2
+KillMode=process
+
+[Install]
+WantedBy=default.target
