@@ -1,0 +1,26 @@
+{
+    "include": [
+        "modules/audio.jsonc",          // pulseaudio, wireplumber
+        "modules/backlight.jsonc",      // backlight
+        "modules/battery.jsonc",        // battery
+        "modules/clock.jsonc",          // clock, clock#1, clock#2, clock#3
+        "modules/cpu.jsonc",            // cpu
+        "modules/gammastep.jsonc",      // custom/gammastep
+        "modules/idle_inhibitor.jsonc", // idle_inhibitor
+        "modules/media.jsonc",          // mpris#state, mpris#meta, custom/media_next
+        "modules/memory.jsonc",         // memory
+        "modules/mpd.jsonc",            // mpd
+        "modules/network.jsonc",        // network
+        "modules/pacman.jsonc",         // custom/pacman
+        "modules/power.jsonc",          // custom/power
+        "modules/screenshot.jsonc",     // custom/screenshot
+        "modules/seperators.jsonc",     // custom/sp1, custom/sp2
+        "modules/storage.jsonc",        // custom/storage
+        "modules/temperature.jsonc",    // temperature
+        "modules/tray.jsonc",           // tray
+        "modules/weather.jsonc",        // custom/weather
+        "modules/wofi.jsonc",           // custom/wofi
+        "modules/workspaces.jsonc",     // hyprland/workspaces
+        "modules/yt-music.jsonc"        // custom/yt-like, custom/yt-dislike
+    ]
+}

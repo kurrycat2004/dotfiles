@@ -1,0 +1,40 @@
+{
+  "pulseaudio": {
+      "scroll-step": 3, // %, can be a float
+      "format": "{icon} {volume}% {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-source": "",
+      "format-source-muted": "",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol",
+      "on-click-right": "amixer sset Master toggle"
+  },
+  
+  "wireplumber": {
+      "on-click": "pavucontrol",
+      "on-click-right": "amixer sset Master toggle 1>/dev/null",
+      "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
+      "format-muted": " ",
+      "format-source": "",
+      "format-source-muted": "",
+      "format-icons": {
+          "headphone": " ",
+          "hands-free": " ",
+          "headset": " ",
+          "phone": " ",
+          "portable": " ",
+          "car": " ",
+          "default": [" ", " ", " "]
+      }
+  }
+}

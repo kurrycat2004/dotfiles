@@ -1,0 +1,8 @@
+{
+  "cpu": {
+      "interval": 1,
+      "format": " {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+      "max-length": 15,
+      "min-length": 15
+  }
+}

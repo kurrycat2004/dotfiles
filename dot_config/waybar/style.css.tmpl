@@ -16,10 +16,12 @@
     background-image: none;
 }
 
-* > label {
-    padding: 1 5px;
+/* widget content padding */
+widget > label, widget > box {
+    padding: 1px 5px;
 }
 
+/* y bar padding */
 window > box {
     padding: 3px 0;
 }
@@ -88,7 +90,6 @@ window#waybar.hidden {
 
 #tray {
     background-color: @theme_bg_color;
-    border-radius: 14px;
 }
 
 #cpu {
@@ -103,7 +104,6 @@ window#waybar.hidden {
 
 #custom-power {
     background-color: @theme_bg_color;
-    border-radius: 6px;
 }
 
 .modules-left > widget:first-child > #workspaces {

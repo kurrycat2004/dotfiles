@@ -1,0 +1,12 @@
+{
+  "temperature": {
+      "interval": 4,
+      "critical-threshold": 80,
+      "format-critical": "  {temperatureC}°C",
+      "format": "{icon}  {temperatureC}°C",
+      "format-icons": ["", "", ""],
+      "max-length": 7,
+      "min-length": 7,
+      "on-click": "xsensors"
+  }
+}
