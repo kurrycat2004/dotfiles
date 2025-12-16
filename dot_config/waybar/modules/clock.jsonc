@@ -5,21 +5,23 @@
         "today-format": "<b>{}</b>"
     },
     
-    "clock#1": {
-        "format": " {:%a}",
+    "clock#date": {
+        "format": "{:%d.%m.%y}",
         "tooltip": false,
         "on-click": "gsimplecal"
     },
     
-    "clock#2": {
-        "format": " {:%d-%h-%Y}",
+    "clock#time": {
+        "format": "{:%H:%M:%S}",
+        "interval": 1,
         "tooltip": false,
         "on-click": "gsimplecal"
     },
     
-    "clock#3": {
-        "format": " {:%H:%M:%S %p}",
+    "clock#datetime": {
+        "format": "{:%d.%m.%y %H:%M:%S}",
+        "interval": 1,
         "tooltip": false,
         "on-click": "gsimplecal"
-    }
+    },
 }

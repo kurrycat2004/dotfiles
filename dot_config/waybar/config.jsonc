@@ -22,7 +22,7 @@
         // "group/media",
     ],
     "modules-center": [
-        "clock#time",
+        "clock#datetime",
         "custom/weather",
     ],
     "modules-right": [
