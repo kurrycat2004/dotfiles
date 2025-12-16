@@ -7,6 +7,3 @@ ExecStart=/usr/bin/anyrun daemon
 Restart=always
 RestartSec=2
 KillMode=process
-
-[Install]
-WantedBy=default.target

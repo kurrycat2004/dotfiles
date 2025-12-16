@@ -1,0 +1,8 @@
+[Unit]
+Description=swww wallpaper daemon
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swww-daemon --namespace "wallpaper"
+Restart=on-failure

@@ -13,3 +13,6 @@ Slice=session.slice
 Type=notify
 ExecStart=/usr/bin/hyprland
 Restart=no
+
+[Install]
+WantedBy=default.target

@@ -17,8 +17,17 @@ README.md
 .config/systemd/user/*.service.wants/waybar.service
 {{- end }}
 
-{{- if ne .bar "noctalia" }}
+{{- if and (ne .bar "noctalia") (ne .wallpaper "noctalia") }}
 .config/noctalia/**
 .config/systemd/user/noctalia.service
 .config/systemd/user/*.service.wants/noctalia.service
+{{- end }}
+
+{{- if ne .colorgen "" }}
+.config/alacritty/colors.toml
+{{- end }}
+
+{{- if ne .wallpaper "swww" }}
+.config/systemd/user/swww-*.service
+.config/systemd/user/*.service.wants/swww-*.service
 {{- end }}
