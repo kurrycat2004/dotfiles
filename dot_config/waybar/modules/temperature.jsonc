@@ -4,7 +4,7 @@
       "critical-threshold": 80,
       "format-critical": "  {temperatureC}°C",
       "format": "{icon}  {temperatureC}°C",
-      "format-icons": ["", "", ""],
+      "format-icons": ["", "", ""],
       "max-length": 7,
       "min-length": 7,
       "on-click": "xsensors"
