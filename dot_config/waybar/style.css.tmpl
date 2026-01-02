@@ -21,25 +21,35 @@ widget > label, widget > box {
     padding: 1px 5px;
 }
 
-/* y bar padding */
-window > box {
-    padding: 3px 0;
-}
-
 /* Main bar */
 #waybar {
     border-radius: 0;
-}
-
-window#waybar {
     background-color: transparent;
 }
+#waybar > box {
+    margin: 3px 3px;
+}
 
-window#waybar.hidden {
+#waybar.hidden {
     opacity: 0.2;
 }
 
 /* Elements */
+.module {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.modules-left   > widget:first-child > .module,
+.modules-center > widget:first-child > .module,
+.modules-right  > widget:first-child > .module {
+    margin-left: 0;
+}
+.modules-left   > widget:last-child > .module,
+.modules-center > widget:last-child > .module,
+.modules-right  > widget:last-child > .module {
+    margin-right: 0;
+}
+
 .module {
     background-color: @theme_bg_color;
 }
@@ -51,6 +61,8 @@ window#waybar.hidden {
 /* Workspaces */
 #workspaces {
     background-color: @theme_base_color;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #workspaces button {
@@ -88,29 +100,12 @@ window#waybar.hidden {
     margin-right: 0;
 }
 
-#tray {
-    background-color: @theme_bg_color;
-}
-
 #cpu {
     color: #fb958b;
-    background-color: @theme_bg_color;
 }
 
 #memory {
     color: #ebcb8b;
-    background-color: @theme_bg_color;
-}
-
-#custom-power {
-    background-color: @theme_bg_color;
-}
-
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
 }
 
 #pulseaudio {
