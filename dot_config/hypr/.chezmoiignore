@@ -1,0 +1,3 @@
+{{- if ne .compositor "hyprland" }}
+./**
+{{- end }}

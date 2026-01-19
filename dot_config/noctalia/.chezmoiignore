@@ -1,0 +1,3 @@
+{{- if and (ne .bar "noctalia") (ne .wallpaper "noctalia") }}
+./**
+{{- end }}

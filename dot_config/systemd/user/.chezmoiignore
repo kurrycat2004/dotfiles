@@ -1,0 +1,23 @@
+{{- if ne .compositor "hyprland" }}
+./hyprland.service
+./hyprland.service.wants/**
+{{- end }}
+
+{{- if ne .compositor "niri" }}
+./niri.service.wants/**
+{{- end }}
+
+{{- if ne .bar "waybar" }}
+./waybar.service
+./*.service.wants/waybar.service
+{{- end }}
+
+{{- if and (ne .bar "noctalia") (ne .wallpaper "noctalia") }}
+./noctalia.service
+./*.service.wants/noctalia.service
+{{- end }}
+
+{{- if ne .wallpaper "swww" }}
+./swww-*.service
+./*.service.wants/swww-*.service
+{{- end }}

@@ -6,7 +6,11 @@ WINIT_X11_SCALE_FACTOR = "1"
 live_config_reload = true
 working_directory = "None"
 import = [
-    "~/.config/alacritty/colors.toml"
+    {{- if eq .colorgen "noctalia" }}
+    "~/.config/alacritty/themes/noctalia.toml",
+    {{- else }}
+    "~/.config/alacritty/themes/default.toml",
+    {{- end }}
 ]
 
 [window]
