@@ -13,7 +13,7 @@
     },
     
     "clock#datetime": {
-        "format": "{:%d.%m.%y %H:%M:%S}",
+        "format": "{:%H:%M:%S - %d.%m.%y}",
         "interval": 1,
         "tooltip": true,
         "on-click": "gsimplecal",
