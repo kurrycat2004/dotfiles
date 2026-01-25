@@ -1,15 +1,18 @@
 {
     "network": {
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format": "",
-        "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format": "{icon} ({signalStrength}%)",
+        "format-linked": "{icon} (No IP)",
+        "format-alt": "{icon} {ifname}: {ipaddr}/{cidr}",
+        "format-icons": {
+          "default": "",
+          "linked": "",
+          "disconnected": "󰣼",
+          "ethernet": ["󰣴", "󰣶", "󰣸", "󰣺"],
+          "wifi": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        },
         "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         "on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
-        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format": "{icon} {ifname} {frequency}MHz\n{essid}\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
         "interval": 10
     }
 }
