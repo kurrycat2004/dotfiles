@@ -7,14 +7,14 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format-icons": {
+          "discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+          "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+        "format-time": "{H}:{m}:00",
+        "tooltip-format": "󱧥 {time}\n󰂅 {power:.2f}W\n󱈏 {health}%",
+        "tooltip-format-charging": "󱧥 {timeTo}\n󱟠 {power:.2f}W\n󱈏 {health}%",
+        "tooltip-format-discharging": "󱧦 {timeTo}\n󱟟 {power:.2f}W\n󱈐 {health}%"
     }
 }
