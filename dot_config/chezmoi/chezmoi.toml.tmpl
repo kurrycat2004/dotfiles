@@ -2,17 +2,24 @@
 terminal = "alacritty"
 terminalArgs = "-e"
 font = "JetBrainsMonoNL Nerd Font"
-launcher = "anyrun"
+
+# "qs -c noctalia-shell ipc call launcher toggle" | "anyrun"
+launcher = "qs -c noctalia-shell ipc call launcher toggle"
+
 lockScreen = "qs -c noctalia-shell ipc call lockScreen lock"
+
 screenshotArea = "niri msg action screenshot"
 screenshotFull = "niri msg action screenshot-screen"
 timezoneCity = "Hamburg"
 
 # "hyprland" | "niri"
 compositor = "niri"
+
 # "noctalia" | "waybar"
 bar = "noctalia"
+
 # "noctalia" | ""
 colorgen = "noctalia"
+
 # "noctalia" | "swww"
 wallpaper = "noctalia"
