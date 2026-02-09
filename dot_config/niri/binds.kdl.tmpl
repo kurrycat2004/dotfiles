@@ -30,7 +30,7 @@ binds {
         clear-dynamic-cast-target;
     }
 
-    Ctrl+Alt+Print repeat=false hotkey-overlay-title="Copy target window information to clipboard" {
+    Ctrl+Alt+Insert repeat=false hotkey-overlay-title="Copy target window information to clipboard" {
         spawn-sh "niri msg pick-window | wl-copy; notify-send 'Copied window info to clipboard!'";
     }
 
