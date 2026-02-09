@@ -21,3 +21,8 @@
 ./swww-*.service
 ./*.service.wants/swww-*.service
 {{- end }}
+
+{{- if ne .launcher "anyrun" }}
+./anyrun.service
+./*.service.wants/anyrun.service
+{{- end }}
