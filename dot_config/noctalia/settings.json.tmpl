@@ -67,58 +67,28 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
-                {
-                    "characterCount": 2,
-                    "colorizeIcons": false,
-                    "emptyColor": "secondary",
-                    "enableScrollWheel": true,
-                    "focusedColor": "primary",
-                    "followFocusedScreen": false,
-                    "groupedBorderOpacity": 1,
-                    "hideUnoccupied": false,
-                    "iconScale": 0.8,
-                    "id": "Workspace",
-                    "labelMode": "index",
-                    "occupiedColor": "secondary",
-                    "pillSize": 0.6,
-                    "reverseScroll": false,
-                    "showApplications": false,
-                    "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
-                    "unfocusedIconsOpacity": 1
                 }
             ],
             "left": [
                 {
                     "compactMode": false,
                     "diskPath": "/",
-                    "iconColor": "none",
+                    "iconColor": "primary",
                     "id": "SystemMonitor",
-                    "showCpuFreq": false,
+                    "showCpuFreq": true,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskAvailable": false,
                     "showDiskUsage": true,
-                    "showDiskUsageAsPercent": false,
+                    "showDiskUsageAsPercent": true,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
-                    "showMemoryAsPercent": false,
+                    "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
                     "showSwapUsage": false,
                     "textColor": "none",
                     "useMonospaceFont": true
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "textColor": "none",
-                    "useFixedWidth": false
                 },
                 {
                     "colorizeSystemIcon": "none",
@@ -235,6 +205,26 @@
             ],
             "right": [
                 {
+                    "characterCount": 2,
+                    "colorizeIcons": false,
+                    "emptyColor": "secondary",
+                    "enableScrollWheel": true,
+                    "focusedColor": "primary",
+                    "followFocusedScreen": false,
+                    "groupedBorderOpacity": 1,
+                    "hideUnoccupied": true,
+                    "iconScale": 0.75,
+                    "id": "Workspace",
+                    "labelMode": "index",
+                    "occupiedColor": "secondary",
+                    "pillSize": 0.6,
+                    "reverseScroll": false,
+                    "showApplications": true,
+                    "showBadge": true,
+                    "showLabelsOnlyWhenOccupied": true,
+                    "unfocusedIconsOpacity": 1
+                },
+                {
                     "iconColor": "none",
                     "id": "KeepAwake",
                     "textColor": "none"
@@ -247,6 +237,27 @@
                     "textColor": "none"
                 },
                 {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol",
+                    "textColor": "none"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "VPN",
+                    "textColor": "none"
+                },
+                {
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
+                },
+                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
@@ -256,27 +267,6 @@
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "VPN",
-                    "textColor": "none"
-                },
-                {
-                    "hideWhenZero": true,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -458,7 +448,7 @@
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
-        "animationDisabled": false,
+        "animationDisabled": true,
         "animationSpeed": 2,
         "autoStartAuth": false,
         "avatarImage": "",
@@ -675,10 +665,6 @@
             },
             {
                 "enabled": true,
-                "id": "zed"
-            },
-            {
-                "enabled": true,
                 "id": "alacritty"
             }
         ],
@@ -687,7 +673,7 @@
     "ui": {
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
-        "boxBorderEnabled": false,
+        "boxBorderEnabled": true,
         "fontDefault": "{{ .font }}",
         "fontDefaultScale": 1,
         "fontFixed": "{{ .font }}",
@@ -695,7 +681,7 @@
         "networkPanelView": "ethernet",
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": false,
-        "settingsPanelMode": "centered",
+        "settingsPanelMode": "window",
         "tooltipsEnabled": true,
         "wifiDetailsViewMode": "grid"
     },
