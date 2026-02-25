@@ -5,6 +5,6 @@ Requisite=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=qs --log-rules "quickshell.dbus.properties.warning=false" -c noctalia-shell
+ExecStart=qs --log-rules "quickshell.dbus.properties.warning=false" -c noctalia-shell --no-duplicate
 Restart=on-failure
 RestartSec=1

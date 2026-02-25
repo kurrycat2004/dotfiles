@@ -26,7 +26,7 @@ window-rule {
     match app-id=r#"^steam$"#
     exclude app-id="^steam$" title="^Steam$"
     match app-id=r#"^xdg-desktop-portal$"#
-    match app-id=r#"^org.quickshell$"# title="^Noctalia$"
+    match app-id=r#"^(org\.quickshell|dev\.noctalia\.noctalia-qs)$"# title="^Noctalia$"
     open-floating true
 }
 
