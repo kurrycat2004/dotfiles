@@ -1,6 +1,6 @@
 layer-rule {
     match namespace="^noctalia-wallpaper*"
-    match namespace="^swww-daemonoverview"
+    match namespace="^awww-daemonoverview"
     place-within-backdrop true
 }
 

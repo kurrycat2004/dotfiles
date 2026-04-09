@@ -1,8 +1,0 @@
-[Unit]
-Description=swww overview daemon
-After=graphical-session.target
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/swww-daemon --namespace "overview"
-Restart=on-failure

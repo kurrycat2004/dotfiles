@@ -17,9 +17,9 @@
 ./*.service.wants/noctalia.service
 {{- end }}
 
-{{- if ne .wallpaper "swww" }}
-./swww-*.service
-./*.service.wants/swww-*.service
+{{- if ne .wallpaper "awww" }}
+./awww-*.service
+./*.service.wants/awww-*.service
 {{- end }}
 
 {{- if ne .launcher "anyrun" }}
