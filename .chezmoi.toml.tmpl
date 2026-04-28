@@ -1,0 +1,48 @@
+{{ $timezoneCity := promptStringOnce . "timezoneCity" "Timezone" "Hamburg" -}}
+{{ $font         := promptStringOnce . "font"         "Font"     "JetBrainsMonoNL Nerd Font" -}}
+
+{{- $shell      := promptChoiceOnce . "shell"      "Shell"      (list "noctalia" "dms" "None") -}}
+{{- $compositor := promptChoiceOnce . "compositor" "Compositor" (list "niri" "hyprland") -}}
+
+{{- $launcherCmd := "" -}}
+{{- $lockScreenCmd := "" -}}
+{{- $bar := "" -}}
+{{- $colorgen := "" -}}
+{{- $wallpaper := "" -}}
+
+{{- if eq $shell "noctalia" -}}
+  {{- $launcherCmd   = "qs -c noctalia-shell ipc call launcher toggle" -}}
+  {{- $lockScreenCmd = "qs -c noctalia-shell ipc call lockScreen lock" -}}
+  {{- $bar           = "noctalia" -}}
+  {{- $colorgen      = "noctalia" -}}
+  {{- $wallpaper     = "noctalia" -}}
+{{- else if eq $shell "dms" -}}
+  {{- $launcherCmd   = "dms ipc call spotlight toggle" -}}
+  {{- $lockScreenCmd = "dms ipc call lock lock" -}}
+  {{- $bar           = "dms" -}}
+  {{- $colorgen      = "dms" -}}
+  {{- $wallpaper     = "dms" -}}
+{{- else -}}
+  {{- $launcherCmd   = promptStringOnce . "launcherCmd" "Launcher command" "anyrun" -}}
+  {{- $lockScreenCmd = promptStringOnce . "lockScreenCmd" "Lock screen command" "swaylock" -}}
+  {{- $bar           = promptChoiceOnce . "bar" "Bar" (list "waybar" "noctalia" "dms") -}}
+  {{- $colorgen      = promptChoiceOnce . "colorgen" "Color generator" (list "" "noctalia" "dms") -}}
+  {{- $wallpaper     = promptChoiceOnce . "wallpaper" "Wallpaper" (list "awww" "noctalia" "dms") -}}
+{{- end -}}
+
+[data]
+terminal = "alacritty"
+terminalArgs = "-e"
+
+screenshotArea = "niri msg action screenshot"
+screenshotFull = "niri msg action screenshot-screen"
+
+timezoneCity = {{ $timezoneCity | quote }}
+font = {{ $font | quote }}
+compositor   = {{ $compositor | quote }}
+
+launcherCmd   = {{ $launcherCmd | quote }}
+lockScreenCmd = {{ $lockScreenCmd | quote }}
+bar           = {{ $bar | quote }}
+colorgen      = {{ $colorgen | quote }}
+wallpaper     = {{ $wallpaper | quote }}

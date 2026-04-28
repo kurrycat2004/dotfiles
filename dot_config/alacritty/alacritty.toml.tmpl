@@ -8,6 +8,8 @@ working_directory = "None"
 import = [
     {{- if eq .colorgen "noctalia" }}
     "~/.config/alacritty/themes/noctalia.toml",
+    {{- else if eq .colorgen "dms" }}
+    "~/.config/alacritty/dank-theme.toml",
     {{- else }}
     "~/.config/alacritty/themes/default.toml",
     {{- end }}
@@ -19,129 +21,48 @@ decorations = "full"
 title = "Alacritty"
 opacity = 0.8
 decorations_theme_variant = "Dark"
-
-[window.dimensions]
-columns = 100
-lines = 30
-
-[window.class]
-instance = "Alacritty"
-general = "Alacritty"
+dimensions = { columns = 100, lines = 30 }
+class = { instance = "Alacritty", general = "Alacritty" }
 
 [scrolling]
 history = 10000
 multiplier = 3
 
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[font]
-size = 12
-
-[font.normal]
-family = "{{ .font }}"
-style = "Regular"
-
-[font.bold]
-family = "{{ .font }}"
-style = "Bold"
-
-[font.italic]
-family = "{{ .font }}"
-style = "Italic"
-
-[font.bold_italic]
-family = "{{ .font }}"
-style = "Bold Italic"
-
-[selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
-save_to_clipboard = true
-
 [cursor]
 style = "Underline"
-vi_mode_style = "None"
 unfocused_hollow = true
 thickness = 0.15
 
 [mouse]
 hide_when_typing = true
 
-[[mouse.bindings]]
-mouse = "Middle"
-action = "PasteSelection"
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = false
+
+[bell]
+duration = 0
+
+[font]
+size = 12
+normal = { family = "JetBrainsMonoNL Nerd Font", style = "Regular" }
+bold   = { family = "JetBrainsMonoNL Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMonoNL Nerd Font", style = "Italic" }
 
 [keyboard]
-[[keyboard.bindings]]
-key = "Paste"
-action = "Paste"
-
-[[keyboard.bindings]]
-key = "Copy"
-action = "Copy"
-
-[[keyboard.bindings]]
-key = "L"
-mods = "Control"
-action = "ClearLogNotice"
-
-[[keyboard.bindings]]
-key = "L"
-mods = "Control"
-mode = "~Vi"
-chars = "\f"
-
-[[keyboard.bindings]]
-key = "PageUp"
-mods = "Shift"
-mode = "~Alt"
-action = "ScrollPageUp"
-
-[[keyboard.bindings]]
-key = "PageDown"
-mods = "Shift"
-mode = "~Alt"
-action = "ScrollPageDown"
-
-[[keyboard.bindings]]
-key = "Home"
-mods = "Shift"
-mode = "~Alt"
-action = "ScrollToTop"
-
-[[keyboard.bindings]]
-key = "End"
-mods = "Shift"
-mode = "~Alt"
-action = "ScrollToBottom"
-
-[[keyboard.bindings]]
-key = "V"
-mods = "Control|Shift"
-action = "Paste"
-
-[[keyboard.bindings]]
-key = "C"
-mods = "Control|Shift"
-action = "Copy"
-
-[[keyboard.bindings]]
-key = "F"
-mods = "Control|Shift"
-action = "SearchForward"
-
-[[keyboard.bindings]]
-key = "B"
-mods = "Control|Shift"
-action = "SearchBackward"
-
-[[keyboard.bindings]]
-key = "C"
-mods = "Control|Shift"
-mode = "Vi"
-action = "ClearSelection"
-
-[[keyboard.bindings]]
-key = "Key0"
-mods = "Control"
-action = "ResetFontSize"
+bindings = [
+  { key = "C",       mods = "Control|Shift", action = "Copy"  },
+  { key = "V",       mods = "Control|Shift", action = "Paste" },
+  { key = "N",       mods = "Control|Shift", action = "SpawnNewInstance" },
+  { key = "Plus",    mods = "Control",       action = "IncreaseFontSize" },
+  { key = "Minus",   mods = "Control",       action = "DecreaseFontSize" },
+  { key = "Key0",    mods = "Control",       action = "ResetFontSize"    },
+  { key = "Enter",   mods = "Shift",         chars = "\n" },
+  { key = "L",       mods = "Control",       action = "ClearLogNotice" },
+  { key = "Up",      mods = "Shift|Alt",     action = "ScrollPageUp" },
+  { key = "Down",    mods = "Shift|Alt",     action = "ScrollPageDown" },
+  { key = "Left",    mods = "Shift|Alt",     action = "ScrollToTop" },
+  { key = "Right",   mods = "Shift|Alt",     action = "ScrollToBottom" },
+  { key = "F",       mods = "Control|Shift", action = "SearchForward" },
+  { key = "B",       mods = "Control|Shift", action = "SearchBackward" },
+]

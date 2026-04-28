@@ -1,16 +1,18 @@
-include "autostart.kdl"
-
-include "input.kdl"
-include "monitors.kdl"
-
-include "layout.kdl"
 include "animations.kdl"
-include "overview.kdl"
+include optional=true "autostart.kdl"
 include "binds.kdl"
-
-include "noctalia.kdl"
-
-include "misc.kdl"
 include "environment.kdl"
-
+include "input.kdl"
+include "layout.kdl"
+include "misc.kdl"
+include "monitors.kdl"
+include "overview.kdl"
 include "window-rules.kdl"
+
+// Include dms files
+include optional=true "dms/colors.kdl"
+//include "dms/layout.kdl"
+//include "dms/alttab.kdl"
+//include "dms/binds.kdl"
+include optional=true "dms/outputs.kdl"
+include optional=true "dms/cursor.kdl"

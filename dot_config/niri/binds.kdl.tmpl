@@ -3,11 +3,11 @@
 binds {
     // apps
     Mod+Return repeat=false hotkey-overlay-title="Open new terminal" { spawn "{{ .terminal }}"; }
-    Mod+Space  repeat=false hotkey-overlay-title="Open app launcher" { spawn-sh "{{ .launcher }}"; }
+    Mod+Space  repeat=false hotkey-overlay-title="Open app launcher" { spawn-sh "{{ .launcherCmd }}"; }
     Mod+E      repeat=false hotkey-overlay-title="Open file manager" { spawn "nemo"; }
     Mod+Q      repeat=false hotkey-overlay-title="Close window"      { close-window; }
     
-    Mod+L repeat=false hotkey-overlay-title="Lock screen" { spawn-sh "{{ .lockScreen }}"; }
+    Mod+L repeat=false hotkey-overlay-title="Lock screen" { spawn-sh "{{ .lockScreenCmd }}"; }
     
     // wallpaper
     Mod+Ctrl+W repeat=false hotkey-overlay-title="Open wallpaper selector" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }

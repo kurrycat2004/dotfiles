@@ -17,12 +17,17 @@
 ./*.service.wants/noctalia.service
 {{- end }}
 
+{{- if and (ne .bar "dms") (ne .wallpaper "dms") }}
+./dms.service
+./*.service.wants/dms.service
+{{- end }}
+
 {{- if ne .wallpaper "awww" }}
 ./awww-*.service
 ./*.service.wants/awww-*.service
 {{- end }}
 
-{{- if ne .launcher "anyrun" }}
+{{- if ne .launcherCmd "anyrun" }}
 ./anyrun.service
 ./*.service.wants/anyrun.service
 {{- end }}

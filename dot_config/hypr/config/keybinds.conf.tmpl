@@ -16,7 +16,7 @@ bindd = $mainMod, Y, Pin current window (shows on all workspaces), pin
 bindd = $mainMod, J, Toggles current window split mode, togglesplit, # dwindle
 bindd = $mainMod, W, Changes the Wallpaper to a random one, exec, qs -c noctalia-shell ipc call wallpaper random
 bindd = $mainMod CTRL, W, Opens the Wallpaper selector, exec, qs -c noctalia-shell ipc call wallpaper toggle
-bindd = $mainMod, L, Lock the screen, exec, {{ .lockScreen }}
+bindd = $mainMod, L, Lock the screen, exec, {{ .lockScreenCmd }}
 
 bind = $mainMod CTRL, O, exec, sh -c 'hyprctl -j activewindow | wl-copy; notify-send "Copied current window Info!"'
 
