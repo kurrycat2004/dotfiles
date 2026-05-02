@@ -1,7 +1,15 @@
 layer-rule {
-    match namespace="^noctalia-wallpaper*"
+    match namespace="^noctalia-overview*"
     match namespace="^awww-daemonoverview"
     place-within-backdrop true
+}
+
+layer-rule {
+  match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+  background-effect {
+    blur false
+    xray false
+  }
 }
 
 overview {
