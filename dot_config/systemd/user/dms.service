@@ -7,6 +7,7 @@ Requisite=graphical-session.target
 [Service]
 Type=dbus
 BusName=org.freedesktop.Notifications
+Environment=QT_QPA_PLATFORMTHEME=qt6ct
 ExecStart=/usr/bin/dms run --session
 ExecReload=/usr/bin/pkill -USR1 -x dms
 Restart=on-failure
