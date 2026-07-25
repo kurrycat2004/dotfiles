@@ -9,8 +9,10 @@ include "monitors.kdl"
 include "overview.kdl"
 include "window-rules.kdl"
 
-// Include dms files
+// colors
 include optional=true "dms/colors.kdl"
+include optional=true "noctalia.kdl"
+
 //include "dms/layout.kdl"
 //include "dms/alttab.kdl"
 //include "dms/binds.kdl"
