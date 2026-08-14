@@ -7,8 +7,15 @@
   - `chezmoi init git@github.com:kurrycat2004/dotfiles.git`
 
 - Packages
-  - required: `alacritty anyrun niri noctalia-shell`
-  - want: `btop chameleos lf micro`
+  - required: 
+    - `alacritty`
+    - `niri`
+    - `noctalia-shell`
+  - want: 
+    - `btop`
+    - `lf`
+    - `micro`
+    - [`vellum`](https://github.com/greyxp1/vellum)
 
 - Apply dotfiles
   - `chezmoi apply`

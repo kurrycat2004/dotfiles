@@ -6,9 +6,9 @@ binds {
     Mod+Space  repeat=false hotkey-overlay-title="Open app launcher" { spawn-sh "{{ .launcherCmd }}"; }
     Mod+E      repeat=false hotkey-overlay-title="Open file manager" { spawn "nemo"; }
     Mod+Q      repeat=false hotkey-overlay-title="Close window"      { close-window; }
-    
+
     Mod+L repeat=false hotkey-overlay-title="Lock screen" { spawn-sh "{{ .lockScreenCmd }}"; }
-    
+
     // wallpaper
     Mod+Ctrl+W repeat=false hotkey-overlay-title="Open wallpaper selector" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Mod+W      repeat=false hotkey-overlay-title="New random wallpaper"    { spawn-sh "qs -c noctalia-shell ipc call wallpaper random"; }
@@ -23,11 +23,9 @@ binds {
         spawn-sh "niri msg pick-window | wl-copy; notify-send 'Copied window info to clipboard!'";
     }
 
-    // chameleos binds
-    Mod+P            repeat=false hotkey-overlay-title="Toggle chameleos"              { spawn "chamel" "toggle"; }
-    Mod+Ctrl+P       repeat=false hotkey-overlay-title="Clear chameleos"               { spawn "chamel" "clear-and-deactivate"; }
-    Mod+Shift+P      repeat=false hotkey-overlay-title="Random chameleos stroke color" { spawn-sh "chamel stroke-color \"hsl($(shuf -i0-359 -n1) 80% 40%)\""; }
-    Mod+Ctrl+Shift+P repeat=false hotkey-overlay-title="Reset chameleos stroke color"  { spawn "chamel" "stroke-color" "#FF0000"; }
+    // vellum binds
+    Mod+P            repeat=false hotkey-overlay-title="Toggle vellum"              { spawn "vellum" "toggle"; }
+    Mod+Ctrl+P       repeat=false hotkey-overlay-title="Clear vellum"               { spawn "vellum" "exit"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -55,7 +53,7 @@ binds {
     Mod+Shift+Right { focus-monitor-right; }
     Mod+Shift+Up    { focus-workspace-up; }
     Mod+Shift+Down  { focus-workspace-down; }
-    
+
     Mod+Ctrl+Left  { move-column-left-or-to-monitor-left; }
     Mod+Ctrl+Right { move-column-right-or-to-monitor-right; }
     Mod+Ctrl+Up    { move-window-up-or-to-workspace-up; }
@@ -65,7 +63,7 @@ binds {
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    
+
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
@@ -111,21 +109,21 @@ binds {
     Mod+F       { fullscreen-window; }
     Mod+Ctrl+D  { maximize-window-to-edges; }
     Mod+Shift+F { toggle-windowed-fullscreen; }
-    
+
     // resize width
     Mod+R       { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R  { reset-window-height; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Plus  { set-window-height "+10%"; }
-    
+
 
     // resize width
     Mod+D           { maximize-column; }
     Mod+Shift+D     { expand-column-to-available-width; }
     Mod+Minus   { set-column-width "-10%"; }
     Mod+Plus    { set-column-width "+10%"; }
-    
+
     // center
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }

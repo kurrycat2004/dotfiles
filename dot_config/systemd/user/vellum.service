@@ -1,9 +1,9 @@
 [Unit]
-Description=Chameleos
+Description=Vellum
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/chameleos
+ExecStart=%h/.cargo/bin/vellum
 Restart=always
 RestartSec=2
 KillMode=process
