@@ -4,5 +4,5 @@ Name=Local LLM
 Comment=Start llama.cpp and open its Web UI
 Icon=utilities-terminal
 Terminal=false
-Exec=sh -c 'systemctl --user start llama-server.service; for i in $(seq 1 100); do curl -fs http://127.0.0.1:8080/health >/dev/null 2>&1 && break; sleep 0.1; done; xdg-open http://127.0.0.1:8080'
+Exec=sh -c 'systemctl --user start llama-server.service; for i in $(seq 1 100); do curl -fs http://127.0.0.1:9931/health >/dev/null 2>&1 && break; sleep 0.1; done; xdg-open http://127.0.0.1:9931'
 Categories=Utility;

@@ -3,5 +3,10 @@ Description=llama.cpp WebUI
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/llama-server --models-preset %h/.config/llama.cpp/models.ini --host 127.0.0.1 --port 8080 --offline
+ExecStart=/usr/bin/llama-server \
+    --models-preset %h/.config/llama.cpp/models.ini \
+    --offline \
+    --host 127.0.0.1 \
+    --port 9931 \
+    --tools get_info,read_file,grep_search,file_glob_search
 Restart=no
